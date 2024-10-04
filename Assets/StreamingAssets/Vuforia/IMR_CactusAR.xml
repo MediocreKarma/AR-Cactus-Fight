@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="math1" size="0.500000 0.352812" />
+    <ImageTarget name="math2" size="0.500000 0.714286" />
+    <ImageTarget name="glued" size="0.200000 0.265781" />
+    <ImageTarget name="astronaut" size="0.200000 0.355500" />
+    <ImageTarget name="aloe_vera" size="0.200000 0.358744" />
+  </Tracking>
+</QCARConfig>
