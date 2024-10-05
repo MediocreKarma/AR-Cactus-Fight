@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 131
+  controlID: 106
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 341.33334
     height: 772.6667
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 60
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 49
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -398,7 +398,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages
+    - Assets/Common
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -406,30 +406,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Packages
+  - Assets/Common
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\matei\AR Cactus Fight
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ffffff7f
-    m_LastClickedID: 2147483647
-    m_ExpandedIDs: 000000006661000000ca9a3b
+    m_SelectedIDs: 84610000
+    m_LastClickedID: 24964
+    m_ExpandedIDs: 000000006a61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Resources
-      m_OriginalName: Resources
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24950
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -443,7 +443,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000066610000
+    m_ExpandedIDs: 000000006a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ba6a00009a62000064620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -520,8 +520,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1500
-    y: 72.66667
+    x: -29750
+    y: -31955
     width: 1059
     height: 1278.3334
   m_SerializedDataModeController:
@@ -585,9 +585,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 58430100
-      m_LastClickedID: 82776
-      m_ExpandedIDs: 5049feffa049feffd44ffeffb252feff7255feff325cfeff825cfeffb662feff9465feff5468feff0873feff5873feff8c79feff6a7cfeff2a7ffeff0685feffc687feffd490feff2491feff5897feff369afefff69cfefffea8feff4ea9feff82affeff60b2feff20b5feffb2d8feff02d9feff4adefeff3ce0feff10e2feff2aebfeff7aebfeffbef0feffacf2feff7cf4feff4e02ffff9c02ffffec07ffff040bffffe00cffffc888ffff8889ffff8c89ffff9089ffff9489ffff9889ffffa489ffff4499ffff9499ffffe89effffeaa0ffffcaa2ffffecb8ffff3cb9ffff90beffffb0c1ffff94c3ffff4accffff9accffffe6d1ffffded3ffffbad5ffff4ad9ffff26dbffff9edcffffecdeffff50e5ffffa0e5ffff00eaffff10ebffff00ecffff88eeffff78efffff3af6ffff10f9ffff2cfbffff385d0000445d000040730000ea7300001c7400006874000018750000a47a00002c7b0000507b0000747b0000847b0000d87b00001c7c0000667c00008a7c0000b27c0000b67c000048e00000f4e000007ce100002ee20000d6e700005ce8000080e800008ee80000b8e8000008e90000bee900009aee0000e0ee0000f0ee00008aef0000d8ef000022f0000026f000009a110100ce110100a81201005413010066140100301e01003e1f0100521f01002e2e0100fc3901000a3b0100b63b0100c83c0100
+      m_SelectedIDs: 58c8ffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 14fbffff4060000074600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1029,13 +1029,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.050227642, y: 0.33997038, z: -0.018090533, w: 0.9389718}
+    m_Target: {x: 0.049485676, y: 0.415716, z: -0.02255842, w: 0.90792274}
     speed: 2
-    m_Value: {x: 0.05022518, y: 0.33995372, z: -0.018089646, w: 0.9389258}
+    m_Value: {x: 0.04943796, y: 0.41750982, z: -0.022656199, w: 0.9070436}
   m_Size:
-    m_Target: 0.73407173
+    m_Target: 0.5737367
     speed: 2
-    m_Value: 0.702461
+    m_Value: 0.6007714
   m_Ortho:
     m_Target: 1
     speed: 2

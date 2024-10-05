@@ -8,20 +8,18 @@ public class ProximityAttack : MonoBehaviour
     private static readonly string ATTACK_TRIGGER = "TrAttack";
     private static readonly string IDLE_TRIGGER = "TrIdle";
     private static readonly string CACTUS_TAG = "cactus";
+    private static readonly int NOT_ATTACKING = -1;
 
     private Animator animator;
     private static GameObject[] cactuses;
 
-    private float[] distances;
-    private bool isAttacking = false;
-    private int k = 0;
+    private int attackingIndex = NOT_ATTACKING;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = this.GetComponent<Animator>();
         cactuses = GameObject.FindGameObjectsWithTag(CACTUS_TAG);
-        distances = new float[cactuses.Length];
     }
 
     // Update is called once per frame
@@ -30,19 +28,13 @@ public class ProximityAttack : MonoBehaviour
 
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
         {
-            animator.SetTrigger(isAttacking ? ATTACK_TRIGGER : IDLE_TRIGGER);
-
-            Debug.Log("Resetting trigger");
-        }
-
-        for (int i = 0; i < cactuses.Length; i++)
-        {
-            distances[i] = Vector3.Distance(gameObject.transform.position, cactuses[i].transform.position);
+            animator.SetTrigger(attackingIndex != NOT_ATTACKING ? ATTACK_TRIGGER : IDLE_TRIGGER);
         }
 
         const float FIGHT_RANGE = 0.5f;
+        float minDistance = float.MaxValue;
+        int attackableIndex = NOT_ATTACKING; for (int i = 0; i < cactuses.Length; i++);
 
-        int attackableIndex = -1;
         for (int i = 0; i < cactuses.Length; i++)
         {
             if (cactuses[i] == gameObject)
@@ -50,34 +42,35 @@ public class ProximityAttack : MonoBehaviour
                 continue;
             }
 
-            if (distances[i] <= FIGHT_RANGE)
+            float distance = Vector3.Distance(gameObject.transform.position, cactuses[i].transform.position);
+
+            if (distance <= FIGHT_RANGE && distance < minDistance)
             {
                 attackableIndex = i;
-                break;
+                minDistance = distance;
             }
         }
 
-        if (attackableIndex == -1)
+        if (attackableIndex == NOT_ATTACKING)
         {
-            if (!isAttacking)
+            if (attackingIndex == NOT_ATTACKING)
             {
                 return;
             }
 
             animator.SetTrigger(IDLE_TRIGGER);
             this.transform.rotation = Quaternion.identity;
-            isAttacking = false;
+            attackingIndex = NOT_ATTACKING;
             return;
         }
 
-        if (isAttacking)
+        if (attackingIndex != NOT_ATTACKING && attackingIndex == attackableIndex)
         {
             return;
         }
-        Debug.Log("Attacking " + attackableIndex.ToString());
+
         animator.SetTrigger(ATTACK_TRIGGER);
         this.transform.LookAt(cactuses[attackableIndex].transform.position);
-        isAttacking = true;
-
+        attackingIndex = attackableIndex;
     }
 }
