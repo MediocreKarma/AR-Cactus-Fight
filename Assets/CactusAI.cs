@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -68,6 +68,9 @@ public class CactusAI : MonoBehaviour
                 return;
             }
             hp = CACTUS_TOTAL_HP;
+            animator.SetTrigger(IDLE_TRIGGER); 
+            attackingIndex = NOT_ATTACKING;   
+            return; 
         }
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
         {
