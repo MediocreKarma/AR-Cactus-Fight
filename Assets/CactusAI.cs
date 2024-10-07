@@ -13,6 +13,7 @@ public class CactusAI : MonoBehaviour
     private static readonly float CACTUS_DEAD_TIMER = 10;
     private static readonly int CACTUS_ATTACK_DAMAGE = 1;
 
+    private Transform cameraTransform;
     private Animator animator;
     private static readonly List<CactusAI> cactuses = new();
 
@@ -55,6 +56,7 @@ public class CactusAI : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        cameraTransform = Camera.main.transform;
     }
 
     // Update is called once per frame
@@ -113,13 +115,14 @@ public class CactusAI : MonoBehaviour
             }
 
             animator.SetTrigger(IDLE_TRIGGER);
-            transform.rotation = Quaternion.identity;
+            transform.LookAt(cameraTransform, Vector3.up);
             attackingIndex = NOT_ATTACKING;
             return;
         }
 
         if (attackingIndex == attackableIndex)
         {
+            transform.LookAt(cactuses[attackableIndex].transform.position);
             return;
         }
         Debug.Log(this + " is attacking " + cactuses[attackableIndex]);
